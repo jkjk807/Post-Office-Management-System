@@ -1,0 +1,29 @@
+<div  class="section">
+  <hr>
+  <h2>List Parcels</h2>
+  <hr>
+  <table class="table table-striped table-hover table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>#</th>
+        <th>ID</th>
+        <th>Address</th>
+        <th>Weight</th>
+        <th>Fragile?</th>
+        <!-- <th>Delete?</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let item of parcels;let i=index">
+        <tr>
+          <td>{{(i+1)}}</td>
+          <td>{{item._id}}</td>
+          <td>{{item.address}}</td>
+          <td>{{item.weight}}</td>
+          <td>{{item.fragile}}</td>
+          <!-- <td> <button (click)="deleteParcel(item._id)" type="button" class="btn btn-danger"> X</button></td> -->
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

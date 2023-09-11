@@ -1,0 +1,45 @@
+<div  class="section">
+  <hr>
+  <h2>Add Parcel to Sender</h2>
+  <hr>
+  <form class="form-class">
+
+    <div class="form-group col-md-3">
+      <label for="inputMaker4">Sender ID</label>
+      <input type="text" class="form-control" id="sender" placeholder="Sender ID" [(ngModel)]="parcel.sender"
+        name="sender">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="inputModel4">Address</label>
+      <input type="text" class="form-control" id="address" placeholder="Address" [(ngModel)]="parcel.address"
+        name="address">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="inputYear">Weight</label>
+      <input type="number" class="form-control col-md-4" id="weight" placeholder="Weight" [(ngModel)]="parcel.weight"
+        name="weight">
+    </div>
+
+    <!-- <div class="form-group col-md-3">
+      <label for="inputaddress">Cost</label>
+      <input type="number" class="form-control" id="cost" [(ngModel)]="parcel.cost" name="cost">
+    </div> -->
+
+    <div class="form-group col-md-3">
+      <label for="fragile">Is Fragile?</label>
+      <select id="fragile" class="form-control" [(ngModel)]="parcel.fragile" name="fragile">
+        <option value="true">True</option>
+        <option value="false">False</option>
+      </select>
+    </div>
+
+    <button (click)="addParcel()" type="button" class="btn btn-primary">Add Parcel </button>
+    <!--
+
+    <button (click)="deleteParcelsWithoutWeight()" [disabled]="getParcelsWithoutWeight()==0" type="button"
+      class="btn btn-warning">Delete Parcels with 0 Weight
+      <span class="badge badge-danger">
+        {{getParcelsWithoutWeight()}}</span></button> -->
+  </form>
+
+</div>

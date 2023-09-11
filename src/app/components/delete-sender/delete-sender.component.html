@@ -1,0 +1,15 @@
+<div class="section">
+  <hr>
+  <h2>Delete Sender</h2>
+  <hr>
+  <form class="form-class">
+    <div class="form-group col-md-3">
+      <label for="inputMaker4">Sender ID</label>
+      <input type="text" class="form-control" id="sender" placeholder="Sender ID" [(ngModel)]="senderId" name="sender">
+    </div>
+
+    <button (click)="deleteSender()" type="button" class="btn btn-danger  mr-1">Delete Sender </button>
+
+  </form>
+
+</div>

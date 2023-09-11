@@ -1,0 +1,28 @@
+ <div id="container">
+   <div class="content">
+  <hr>
+  <h2>List Senders</h2>
+  <hr>
+  <table class="table table-striped table-hover table-bordered">
+    <thead class=" table-dark">
+      <tr>
+        <th>#</th>
+        <th>Sender ID</th>
+        <th>Sender Name</th>
+        <th>Sender Parcels</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let item of senders;let i=index">
+        <tr>
+          <td>{{(i+1)}}</td>
+          <td>{{item._id}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.parcels}}</td>
+          <!-- <td> <button (click)="deleteParcel(item.id)" type="button" class="btn btn-danger"> X</button></td> -->
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>
+</div>
